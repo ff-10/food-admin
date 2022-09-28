@@ -1,1 +1,5 @@
-# food-admin
+# Food App, Admin Panel
+
+----
+
+Live: 
