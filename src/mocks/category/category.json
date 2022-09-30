@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza",
+    "slug": "pizza",
+    "image": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_960_720.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Ice Cream",
+    "slug": "ice-cream",
+    "image": "https://cdn.pixabay.com/photo/2019/11/07/13/05/waffle-4608843_960_720.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Coffee",
+    "slug": "coffee",
+    "image": "https://cdn.pixabay.com/photo/2020/03/20/20/49/coffe-4951985_960_720.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Chinese",
+    "slug": "chinese",
+    "image": "https://cdn.pixabay.com/photo/2015/04/10/00/41/food-715542_960_720.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Indian",
+    "slug": "indian",
+    "image": "https://cdn.pixabay.com/photo/2020/04/07/22/08/indian-food-5015066_960_720.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Sea food",
+    "slug": "sea-food",
+    "image": "https://cdn.pixabay.com/photo/2017/04/14/17/36/fish-2230852_960_720.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Chocolate",
+    "slug": "chocolate",
+    "image": "https://cdn.pixabay.com/photo/2015/10/02/12/00/chocolate-968457_960_720.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Fast Food",
+    "slug": "fast-food",
+    "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Spanish",
+    "slug": "spanish",
+    "image": "https://cdn.pixabay.com/photo/2016/01/29/14/06/paella-1168008_960_720.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Italian",
+    "slug": "italian",
+    "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Chinese",
+    "slug": "chinese",
+    "image": "https://i.insider.com/5c017d3ede34c438983e30b3?width=1136&format=jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Russian",
+    "slug": "russian",
+    "image": "https://cdn.pixabay.com/photo/2017/12/04/06/21/baking-2996390_960_720.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Georgian",
+    "slug": "georgian",
+    "image": "https://cdn.pixabay.com/photo/2021/06/28/07/06/khinkali-6370769_960_720.jpg"
+  }
+]

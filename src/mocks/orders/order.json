@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "customer_id": "0333",
+        "date": "29 Sep 2022",
+        "address": "Nasimi Mirali Gasgai 36",
+        "amount": 130,
+        "payment": "card",
+        "contact": "994553331006"
+    },
+    {
+        "id": 2,
+        "customer_id": "0452",
+        "date": "25 Sep 2022",
+        "address": "Gara Garayev 32",
+        "amount": 310,
+        "payment": "cash",
+        "contact": "994510030304"
+    },
+    {
+        "id": 3,
+        "customer_id": "0194",
+        "date": "6 Nov 2022",
+        "address": "Azadliq ave 45",
+        "amount": 20,
+        "payment": "card",
+        "contact": "994512414353"
+    },
+    {
+        "id": 4,
+        "customer_id": "0505",
+        "date": "3 May 2022",
+        "address": "Rashid Behbudov 21",
+        "amount": 33,
+        "payment": "cash",
+        "contact": "994512043645"
+    },
+    {
+        "id": 5,
+        "customer_id": "0631",
+        "date": "12 May 2022",
+        "address": "Sovetiski 43",
+        "amount": 350,
+        "payment": "cash",
+        "contact": "994778811732"
+    },
+    {
+        "id": 6 ,
+        "customer_id": "0754",
+        "date": "4 Jun 2022",
+        "address": "Nizami 32",
+        "amount": 54.50,
+        "payment": "card",
+        "contact": "994512481043"
+    },
+    {
+        "id": 7,
+        "customer_id": "0946",
+        "date": "10 Jun 2022",
+        "address": "Ganja, Samat Vurgun str",
+        "amount": 314,
+        "payment": "cash",
+        "contact": "994771941043"
+    },
+    {
+        "id": 8,
+        "customer_id": "0848",
+        "date": "13 Jun 2022",
+        "address": "Academic Hasan Aliyev str, 21",
+        "amount": 90.33,
+        "payment": "card",
+        "contact": "994553032133"
+    },
+    {
+        "id": 9,
+        "customer_id": "0573",
+        "date": "30 Jun 2022",
+        "address": "Ataturk ave, 45",
+        "amount": 5,
+        "payment": "cash",
+        "contact": "994503104404"
+    },
+    {
+        "id": 10,
+        "customer_id": "0881",
+        "date": "9 Jul 2022",
+        "address": "Ziya Bunyadov 7B",
+        "amount": 505,
+        "payment": "cash",
+        "contact": "994509232146"
+    },
+    {
+        "id": 11,
+        "customer_id": "0931",
+        "date": "21 Jul 2022",
+        "address": "Suleyman Rahimiv 94",
+        "amount": 29,
+        "payment": "card",
+        "contact": "994508642241"
+    },
+    {
+        "id": 12,
+        "customer_id": "0732",
+        "date": "12 Jan 2021",
+        "address": "Suleyman Rahimiv 35",
+        "amount": 78,
+        "payment": "cash",
+        "contact": "994771328546"
+    }
+]
