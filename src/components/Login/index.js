@@ -1,12 +1,12 @@
 import { useFormik } from 'formik';
-import { FormBody, LoginBody, Logo } from './login.styled';
-import LoginCover from "../../images/logos/logo.svg";
-
+import { FormBody, LoginBody, LoginButton, Logo, Form, CoverImage, Caption, Input, ErrorText } from './login.styled';
+import LogoImg from "../../images/logos/logo.svg";
+import LoginCover from "../../images/loginCover.svg"
 
 
 export default function Login() {
 
-    const [testUsername, testPassword] = ['admin', 123456];//for testing, after connect Redux Toolkit.
+    const [testUsername, testPassword] = ['admin', '123456'];//for testing, after connect Redux Toolkit.
 
     const formik = useFormik({
         initialValues: {
@@ -17,10 +17,10 @@ export default function Login() {
             const errors = {};
 
             if (!values.username) {
-                errors.username = "Username is empty";
+                errors.username = "Wrong Username";
             }
             if (!values.password || values.password <= 4) {
-                errors.password = "Password wrong.";
+                errors.password = "Wrong Password";
             }
 
             return errors;
@@ -35,7 +35,7 @@ export default function Login() {
             }
             else {
                 alert('login successfully')
-                localStorage.setItem('isLogged',)
+                localStorage.setItem('isLogged', true)
                 // and navigate to dashboard
             }
         }
@@ -44,9 +44,20 @@ export default function Login() {
 
     return (
         <LoginBody>
-            <Logo src={LoginCover} alt='Logo'/>
+            <Logo src={LogoImg} alt='Logo' />
             <FormBody>
-                TEST
+                <Form onSubmit={formik.handleSubmit}>
+                    <Caption>Welcome Admin</Caption>
+                    <Input placeholder='Username' type="text" name="username" onChange={formik.handleChange} value={formik.values.username} style={{ marginBottom: 26 }} />
+                    <ErrorText>{formik.errors.username && formik.errors.username}</ErrorText>
+                    <Input placeholder='Password' type="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
+                    <ErrorText>{formik.errors.password && formik.errors.password}</ErrorText>
+                    <LoginButton type='submit' style={{ marginTop: 35 }} >Sign in</LoginButton>
+                </Form>
+
+                <CoverImage>
+                    <img src={LoginCover} width={"90%"} alt='Login Image' />
+                </CoverImage>
             </FormBody>
         </LoginBody>
     )
