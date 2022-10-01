@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
-
+import { FormBody, LoginBody, Logo } from './login.styled';
+import LoginCover from "../../images/logos/logo.svg";
 
 
 
@@ -42,14 +43,11 @@ export default function Login() {
     });
 
     return (
-        <form onSubmit={formik.handleSubmit} style={{ margin: 200 }}>
-            <input type="text" name="username" value={formik.values.username} onChange={formik.handleChange} />
-            <span title='username'>{formik.errors.username && formik.errors.username}</span>
-            <br />
-            <input type="text" name="password" value={formik.values.password} onChange={formik.handleChange} />
-            <span>{formik.errors.password && formik.errors.password}</span>
-            <br />
-            <button type='submit'>Login</button>
-        </form>
+        <LoginBody>
+            <Logo src={LoginCover} alt='Logo'/>
+            <FormBody>
+                TEST
+            </FormBody>
+        </LoginBody>
     )
 } 
