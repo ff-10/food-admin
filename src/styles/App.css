@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 *,
 *::before,
 *::after {
@@ -14,4 +17,5 @@ body {
 body {
     background-color: #1E1E30;
     color: #FFFFFF; /*as default*/
+    font-family: 'Roboto', sans-serif;
 }
