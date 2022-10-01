@@ -78,6 +78,7 @@ export const CoverImage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     @media screen and (max-width: 1200px) {
         background-color: transparent;
@@ -132,3 +133,12 @@ export const ErrorText = styled.span`
     margin: 5px 0;
     letter-spacing: 1px;
 `;
+
+
+export const LangDropdownBox = styled.div`
+
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+`

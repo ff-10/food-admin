@@ -1,7 +1,8 @@
 import { useFormik } from 'formik';
-import { FormBody, LoginBody, LoginButton, Logo, Form, CoverImage, Caption, Input, ErrorText } from './login.styled';
+import { FormBody, LoginBody, LoginButton, Logo, Form, CoverImage, Caption, Input, ErrorText, LangDropdownBox } from './login.styled';
 import LogoImg from "../../images/logos/logo.svg";
 import LoginCover from "../../images/loginCover.svg"
+import LangDropdown from "../DropdownLang"
 
 
 export default function Login() {
@@ -56,6 +57,8 @@ export default function Login() {
                 </Form>
 
                 <CoverImage>
+                    <LangDropdownBox><LangDropdown /></LangDropdownBox>
+                    
                     <img src={LoginCover} width={"90%"} alt='Login Image' />
                 </CoverImage>
             </FormBody>
