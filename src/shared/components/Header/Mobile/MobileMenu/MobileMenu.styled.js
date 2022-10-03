@@ -38,3 +38,38 @@ export const LogoImg = styled.img`
     margin-left: 13px;
     margin-top: 3px;
 `;
+
+
+export const MobileSidebar = styled.div`
+    width: 100%;
+    height: 80%;
+    margin-top: 32px;
+    padding: 10px 22px;
+`;
+
+
+export const SidebarLink = styled.li`
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 500ms;
+    border-radius: 4px;
+    user-select: none;
+    margin: 8px 0;
+    color: #FFFFFF;
+
+    &:hover{
+        background-color: rgba(255,255,255,.2);
+    }
+
+`;
+
+export const SidebarIcon = styled.div`
+    margin-right: 15px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #FFFFFF;
+`
