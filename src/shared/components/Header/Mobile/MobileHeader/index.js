@@ -4,14 +4,16 @@ import LogoImg from "../../../../../images/logos/logo.svg"
 import { HamburgerMenu, HeaderBody, ItemsArea, Logo, AddProductButton, AdminLogo, MenuArea } from "./MobileHeader.styled";
 import { BsPlusLg } from "react-icons/bs"
 import { MdSegment } from "react-icons/md"
+import useMobileMenuProvider from "../../../../../hooks/useMobileMenu";
 
 export default function MobileHeader() {
 
+    const { setOpen } = useMobileMenuProvider();
 
     return (
         <HeaderBody>
             <MenuArea>
-                <HamburgerMenu>
+                <HamburgerMenu onClick={() => setOpen(prev => !prev)}>
                     <MdSegment />
                 </HamburgerMenu>
                 <Logo>
