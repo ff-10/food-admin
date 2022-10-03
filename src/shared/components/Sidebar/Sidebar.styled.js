@@ -10,6 +10,11 @@ export const Sidebar = styled.div`
     padding: 24px 16px;
     position: fixed;
     top: 90px;
+
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
+
 `;
 
 export const SidebarLink = styled.li`
