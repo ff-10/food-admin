@@ -2,19 +2,14 @@ import styled from "styled-components";
 
 
 
-
-export const SidebarBody = styled.div`
-    width: 256px;
-    height: 100% !important;
-
-`;
-
 export const Sidebar = styled.div`
     width: 256px;
     height: 474px;
     background: #C74FEB;
     border-radius: 14px;
     padding: 24px 16px;
+    position: fixed;
+    top: 90px;
 `;
 
 export const SidebarLink = styled.li`
@@ -31,9 +26,7 @@ export const SidebarLink = styled.li`
         background-color: rgba(255,255,255,.2);
     }
 
-
-
-`
+`;
 
 export const SidebarIcon = styled.div`
 

@@ -1,10 +1,12 @@
-import { SidebarBody, Sidebar, SidebarLink, SidebarIcon } from "./Sidebar.styled";
+import { Sidebar, SidebarLink, SidebarIcon } from "./Sidebar.styled";
 
-import {MdDashboard} from "react-icons/md";
-import { Link } from "react-router-dom";
+
+import { GiStrongbox } from 'react-icons/gi';
+import { MdDashboard, MdOutlineStorefront, MdLocalOffer, MdOutlineLogout } from "react-icons/md";
+import { HiOutlineClipboardList } from "react-icons/hi"
 
 function logout() {
-    // clear local storage
+    localStorage.removeItem("isLogged");
     // forward to login
 }
 
@@ -12,32 +14,48 @@ function logout() {
 export default function SideBar() {
 
 
-    
+
 
 
 
     return (
-        <SidebarBody>
-            <Sidebar>
+        <Sidebar>
 
-                <SidebarLink>
-                    <SidebarIcon><MdDashboard/></SidebarIcon>
-                    <span>Dashboard</span>
-                </SidebarLink>
+            <SidebarLink>
+                <SidebarIcon><MdDashboard /></SidebarIcon>
+                <span>Dashboard</span>
+            </SidebarLink>
 
-                <SidebarLink>
-                    <SidebarIcon><MdDashboard/></SidebarIcon>
-                    <span>Dashboard</span>
-                </SidebarLink>
+            <SidebarLink>
+                <SidebarIcon><MdOutlineStorefront /></SidebarIcon>
+                <span>Products</span>
+            </SidebarLink>
 
 
-                <SidebarLink>
-                    <SidebarIcon><MdDashboard/></SidebarIcon>
-                    <span>Dashboard</span>
-                </SidebarLink>
-            </Sidebar>
-            
-        </SidebarBody>
+            <SidebarLink>
+                <SidebarIcon><HiOutlineClipboardList /></SidebarIcon>
+                <span>Restaurants</span>
+            </SidebarLink>
+
+
+            <SidebarLink>
+                <SidebarIcon><GiStrongbox /></SidebarIcon>
+                <span>Category</span>
+            </SidebarLink>
+
+            <SidebarLink>
+                <SidebarIcon><MdLocalOffer /></SidebarIcon>
+                <span>Offers</span>
+            </SidebarLink>
+
+            <SidebarLink onClick={logout}>
+                <SidebarIcon><MdOutlineLogout /></SidebarIcon>
+                <span>Logout</span>
+            </SidebarLink>
+
+
+
+        </Sidebar>
     )
 
 }
