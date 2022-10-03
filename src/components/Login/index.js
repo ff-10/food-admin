@@ -3,9 +3,21 @@ import { FormBody, LoginBody, LoginButton, Logo, Form, CoverImage, Caption, Inpu
 import LogoImg from "../../images/logos/logo.svg";
 import LoginCover from "../../images/loginCover.svg"
 import LangDropdown from "../DropdownLang"
+import { useEffect } from 'react';
 
 
 export default function Login() {
+
+    useEffect(() => {
+
+        const isLogged = localStorage.getItem('isLogged');
+        
+        if(isLogged === "true"){
+            //forward direct to Dashboard otherwise nothing.
+        }
+        
+
+    }, []);
 
     const [testUsername, testPassword] = ['admin', '123456'];//for testing, after connect Redux Toolkit.
 
@@ -58,7 +70,7 @@ export default function Login() {
 
                 <CoverImage>
                     <LangDropdownBox><LangDropdown /></LangDropdownBox>
-                    
+
                     <img src={LoginCover} width={"90%"} alt='Login Image' />
                 </CoverImage>
             </FormBody>
