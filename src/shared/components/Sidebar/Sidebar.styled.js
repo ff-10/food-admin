@@ -3,16 +3,44 @@ import styled from "styled-components";
 
 
 
-export const SidebarBody  = styled.div`
+export const SidebarBody = styled.div`
     width: 256px;
     height: 100% !important;
 
-`
+`;
 
 export const Sidebar = styled.div`
     width: 256px;
     height: 474px;
     background: #C74FEB;
     border-radius: 14px;
-    padding: 20px;
+    padding: 24px 16px;
+`;
+
+export const SidebarLink = styled.li`
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 500ms;
+    border-radius: 4px;
+    user-select: none;
+    margin: 8px 0;
+
+    &:hover{
+        background-color: rgba(255,255,255,.2);
+    }
+
+
+
+`
+
+export const SidebarIcon = styled.div`
+
+    margin-right: 15px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+
 `

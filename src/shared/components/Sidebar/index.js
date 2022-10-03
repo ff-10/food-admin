@@ -1,5 +1,7 @@
-import { SidebarBody, Sidebar } from "./Sidebar.styled";
+import { SidebarBody, Sidebar, SidebarLink, SidebarIcon } from "./Sidebar.styled";
 
+import {MdDashboard} from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function logout() {
     // clear local storage
@@ -10,14 +12,29 @@ function logout() {
 export default function SideBar() {
 
 
-
+    
 
 
 
     return (
         <SidebarBody>
             <Sidebar>
-                Test
+
+                <SidebarLink>
+                    <SidebarIcon><MdDashboard/></SidebarIcon>
+                    <span>Dashboard</span>
+                </SidebarLink>
+
+                <SidebarLink>
+                    <SidebarIcon><MdDashboard/></SidebarIcon>
+                    <span>Dashboard</span>
+                </SidebarLink>
+
+
+                <SidebarLink>
+                    <SidebarIcon><MdDashboard/></SidebarIcon>
+                    <span>Dashboard</span>
+                </SidebarLink>
             </Sidebar>
             
         </SidebarBody>
