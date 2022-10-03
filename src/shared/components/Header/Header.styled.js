@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 
 export const HeaderBody = styled.div`
     background-color: #27283C;
-    width: 100%;
+    width: 90%;
     height: 64px;
     position: fixed;
     top: 0;
