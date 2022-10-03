@@ -5,25 +5,37 @@ import { Button } from "@mui/material";
 export const HeaderBody = styled.div`
     background-color: #27283C;
     width: 100%;
-    height: 64px;
+    height: 50px;
     position: fixed;
     top: 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    display: flex;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: none;
     align-items: center;
     justify-content: space-between;
     
 
     @media screen and (max-width: 576px) {
-        display: none;
+        display: flex;
     }
 `;
 
 
+export const HamburgerMenu = styled.div`
+    background-color: transparent;
+    margin-right: 5px;
+    margin-left: 11px;
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
+    perspective: 300px;
+    transform:  rotateY(180deg);
+
+`
+
 
 export const Logo = styled.div`
-    margin-left: 21px;
+    margin-left: 0px;
 `
 
 
@@ -35,10 +47,15 @@ export const AddProductButton = styled(Button)`
     border-radius: 14px;
     color: #FFFFFF;
     font-weight: bold;
-    margin-right: 22px;
 `
 
 export const ItemsArea = styled.div`
+    display: flex;
+    align-items: center;
+    margin-right: 13px;
+`
+
+export const MenuArea = styled.div`
     display: flex;
     align-items: center;
     margin-right: 13px;
