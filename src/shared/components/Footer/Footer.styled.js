@@ -12,6 +12,11 @@ export const FooterBody = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
+
 `;
 
 
