@@ -43,7 +43,7 @@ export default function MobileMenu() {
 
                 <MobileMenuBody>
                     <Header>
-                        <CloseMenu onClick={() => setOpen(prev => !prev)}><MdOutlineArrowBackIosNew /></CloseMenu>
+                        <CloseMenu onClick={() => { setOpen(prev => !prev) }}><MdOutlineArrowBackIosNew /></CloseMenu>
                         <img src={Logo} alt="Logo" />
                     </Header>
 
