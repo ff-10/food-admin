@@ -3,7 +3,7 @@ import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
-import { Box } from "@mui/system";
+import { DashboardBody } from "./Dashboard.styled";
 
 
 
@@ -14,8 +14,56 @@ export default function Dashboard() {
     return (
         <Container>
             <Header />
-            <Sidebar/>
-            <Footer/>
+            <Sidebar />
+            <Footer />
+
+            <DashboardBody>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+                <h1>TEST</h1>
+            </DashboardBody>
+
         </Container>
     )
 
