@@ -14,6 +14,8 @@ export default function Dashboard() {
     return (
         <Container>
             <Header />
+            <Sidebar/>
+            <Footer/>
         </Container>
     )
 
