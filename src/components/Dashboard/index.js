@@ -3,7 +3,10 @@ import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
-import { DashboardBody } from "./Dashboard.styled";
+import { DashboardBody, FlexContainer, Orders, Salary } from "./Dashboard.styled";
+import Donut from "./Donut";
+
+
 
 
 
@@ -18,55 +21,21 @@ export default function Dashboard() {
             <Footer />
 
             <DashboardBody>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
-                <h1>TEST</h1>
+
+                <FlexContainer>
+                    
+                    <Orders>
+                        <h3 style={{textAlign: "left"}}>Orders</h3>
+                        <Donut />
+                    </Orders>
+                    <Salary>
+                        Salary Chart
+                    </Salary>
+
+                </FlexContainer>
+
             </DashboardBody>
 
         </Container>
     )
-
 }
-
-
