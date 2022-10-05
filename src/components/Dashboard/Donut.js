@@ -2,7 +2,6 @@
 import Chart from 'react-apexcharts';
 import Resturants from "../../mocks/restaurants/restaurnat.json"
 
-
 export default function Donut({ width }) {
 
     const categoryStats = {};
@@ -15,23 +14,27 @@ export default function Donut({ width }) {
         }
     }
 
-    const labels = []
-    const series = []
+    const labels = [];
+    const series = [];
+    
     for (const [category_name, count] of Object.entries(categoryStats)) {
         labels.push(category_name)
         series.push(count)
     }
 
     const donutData = {
-        options: {
-            labels: labels
+        chart: {
+            foreColor: '#50CDEA'
         },
-        series: series,
+        options: {
+            labels
+        },
+        series
     }
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 60 }}>
-            <Chart options={donutData.options} series={donutData.series} type="donut" width={width} />
+            <Chart options={donutData} series={donutData.series} type="donut" width={width} />
         </div>
     )
 

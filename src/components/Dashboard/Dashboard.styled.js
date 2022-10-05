@@ -9,15 +9,28 @@ export const DashboardBody = styled.div`
     width: 84%;
     top: 90px;
     color: #FFF;
+    z-index: 999;
+
+    @media (max-width: 576px) {
+        padding:10px;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+
 `;
 
 export const FlexContainer = styled.div`
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @media screen and(max-width: 576px) {
+    @media (max-width: 576px) {
+        width: 100%;
+        overflow-x: hidden !important;
         flex-direction: column;
     }
 
@@ -31,6 +44,12 @@ export const Orders = styled.div`
     flex: 4;    
     height: 472px;
 
+
+    @media (max-width: 576px) {
+        width: 100%;
+        margin-right: 0;
+    }
+
 `
 
 export const Salary = styled.div`
@@ -38,6 +57,13 @@ export const Salary = styled.div`
     background-color: #27283C;
     padding: 16px;
     border-radius: 14px;
+    height: 472px;
+
+    @media (max-width: 576px) {
+        margin-top: 81px;
+        width: 95%;
+    }
+
 `;
 
 export const Risks = styled.div`
@@ -46,6 +72,7 @@ export const Risks = styled.div`
     border-radius: 14px;
     background-color: #27283C;
     padding: 16px;
+    height: 472px;
 `;
 
 
@@ -55,6 +82,7 @@ export const Actions = styled.div`
     border-radius: 14px;
     background-color: #27283C;
     padding: 16px;
+    height: 472px;
 `;
 
 export const Caption = styled.p`
@@ -62,4 +90,17 @@ export const Caption = styled.p`
     letter-spacing: 0.01em;
     color: #C7C7C7;
     text-align: left;
+`;
+
+export const DimmedEmptyText = styled.div`
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: #8E8E93;
+
 `
