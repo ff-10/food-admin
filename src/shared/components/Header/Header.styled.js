@@ -14,7 +14,7 @@ export const HeaderBody = styled.div`
     align-items: center;
     justify-content: space-between;
     z-index: 999999;
-
+    
     @media screen and (max-width: 576px) {
         display: none;
     }
