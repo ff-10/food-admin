@@ -28,10 +28,9 @@ export const Orders = styled.div`
     background-color: #27283C;
     padding: 16px;
     margin-right: 30px;
-    flex: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
+    flex: 4;    
+    height: 472px;
+
 `
 
 export const Salary = styled.div`
@@ -59,6 +58,7 @@ export const Actions = styled.div`
 `;
 
 export const Caption = styled.p`
+    font-size: 20px;
     letter-spacing: 0.01em;
     color: #C7C7C7;
     text-align: left;

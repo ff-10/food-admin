@@ -3,7 +3,7 @@ import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
-import { DashboardBody, FlexContainer, Orders, Salary } from "./Dashboard.styled";
+import { Caption, DashboardBody, FlexContainer, Orders, Salary } from "./Dashboard.styled";
 import Donut from "./Donut";
 
 
@@ -25,9 +25,10 @@ export default function Dashboard() {
                 <FlexContainer>
                     
                     <Orders>
-                        <h3 style={{textAlign: "left"}}>Orders</h3>
-                        <Donut />
+                        <Caption>Orders</Caption>
+                        <Donut width={450} />
                     </Orders>
+
                     <Salary>
                         Salary Chart
                     </Salary>
