@@ -1,4 +1,4 @@
-import Dashboard from "./components/Dashboard";
+import Products from "./components/Products";
 import "./styles/App.css";
 
 
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <Dashboard/>
+      <Products/>
     </>
   );
 }
