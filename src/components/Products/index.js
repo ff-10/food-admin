@@ -3,13 +3,19 @@ import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
-import { CardContainer, HeaderCaption, ProductsBody, ProductsHeader, PaginationBody } from "./Products.styled";
-import { Select, MenuItem, Pagination, Stack } from "@mui/material";
+import { CardContainer, HeaderCaption, ProductsBody, ProductsHeader, PaginationBody,Pagination } from "./Products.styled";
+import { Select, MenuItem, Stack } from "@mui/material";
 import ProductCard from "./ProductCard";
+
+
 
 const handleChange = (event) => {
     console.log(event.target.value);
 };
+
+
+const page = ""
+
 
 export default function Products() {
 
@@ -54,8 +60,7 @@ export default function Products() {
                 </ProductsHeader>
 
                 <CardContainer>
-                    <ProductCard /> 
-                    
+                    <ProductCard />
                     <ProductCard />
                     <ProductCard />
                     <ProductCard />
@@ -66,7 +71,9 @@ export default function Products() {
                 </CardContainer>
 
                 <PaginationBody>
-                    
+                    <Stack spacing={5} className="mt-5">
+                        <Pagination count={page || 55} color="secondary" size="large" type="previous" />
+                    </Stack>
                 </PaginationBody>
 
             </ProductsBody>

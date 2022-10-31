@@ -1,3 +1,4 @@
+import { Pagination as Pag } from "@mui/material";
 import styled from "styled-components";
 
 export const ProductsBody = styled.div`
@@ -50,9 +51,15 @@ export const CardContainer = styled.div`
 
 
 export const PaginationBody = styled.div`
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 `;
+
+export const Pagination = styled(Pag)`
+    margin-top: 65px;
+    margin-bottom: 30px;
+    background-color: #FFF;
+    border-radius: 4.4px;
+    padding: 5px 3px;
+`
