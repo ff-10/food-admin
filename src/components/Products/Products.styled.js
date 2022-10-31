@@ -44,6 +44,7 @@ export const HeaderCaption = styled.p`
 export const CardContainer = styled.div`
     margin-top: 52px;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     background-color: red;
 `;
