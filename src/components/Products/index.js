@@ -3,21 +3,25 @@ import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
-import { CardContainer, HeaderCaption, ProductsBody, ProductsHeader, PaginationBody,Pagination } from "./Products.styled";
-import { Select, MenuItem, Stack } from "@mui/material";
+import { CardContainer, HeaderCaption, ProductsBody, ProductsHeader} from "./Products.styled";
+import { Select, MenuItem } from "@mui/material";
+
 import ProductCard from "./ProductCard";
+import ProductPagination from "./AppPagination";
+import { useState } from "react";
 
-
-
-const handleChange = (event) => {
-    console.log(event.target.value);
-};
-
-
-const page = ""
 
 
 export default function Products() {
+
+    //filter items function
+    const handleChange = (event) => {
+        console.log(event.target.value);
+    };
+
+
+    const [products, setProducts] = useState([]);
+
 
     return (
         <Container>
@@ -60,23 +64,14 @@ export default function Products() {
                 </ProductsHeader>
 
                 <CardContainer>
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
+                    {products.map(product => (
+                        <ProductCard key={`product-card-index-${product.id}`} image={product.image} name={product.product_name} resturant={product.restaurant_name} cost={product.product_price} id={product.id} />
+                    ))}
                 </CardContainer>
-
-                <PaginationBody>
-                    <Stack spacing={5} className="mt-5">
-                        <Pagination count={page || 55} color="secondary" size="large" type="previous" />
-                    </Stack>
-                </PaginationBody>
+                        
+                <ProductPagination setProducts={(products) => setProducts(products)} />
 
             </ProductsBody>
         </Container>
     )
-}
+};
