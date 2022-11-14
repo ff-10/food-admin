@@ -68,5 +68,12 @@
         "restaurant_name": "Sweet Donut",
         "product_price": "0.50",
         "image": "https://cdn.pixabay.com/photo/2019/09/14/08/08/donut-4475455_960_720.jpg"
+    },
+    {
+        "id": 11,
+        "product_name": "Tantuni",
+        "restaurant_name": "Halil Usta",
+        "product_price": "0.77",
+        "image": "https://media.istockphoto.com/id/843233360/tr/foto%C4%9Fraf/geleneksel-t%C3%BCrk-mutfa%C4%9F%C4%B1-tantuni-somun-ekmek-ile.jpg?s=612x612&w=0&k=20&c=5-qi8ZETPYMcLymuBO9uRtdI2vDUoBX8pFTS0fN30Lg="
     }
 ]

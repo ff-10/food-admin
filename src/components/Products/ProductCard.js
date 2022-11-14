@@ -18,16 +18,16 @@ export default function ProductCard({ image, name, resturant, cost, id }) {
 
 
     return (
-        <Card style={{ width: 196, marginRight: 40, marginBottom: 26 }}>
+        <Card style={{ width: 196,height: 300, marginRight: 40, marginBottom: 26 }}>
             <CardMedia
                 component="img"
                 alt="Product Image"
                 height="158"
                 image={image}
-                style={{ padding: 10, objectFit: "cover", borderRadius: 25 }}
+                style={{objectFit: "cover", borderTopRightRadius: 4, borderTopLeftRadius: 4 }}
             />
             <CardContent>
-                <Typography component="p" style={{ fontSize: 18, fontWeight: "bold", color: "#1E1E30", marginBottom: 5 }}>
+                <Typography component="p" style={{ fontSize: 18, fontWeight: "bold", color: "#1E1E30", whiteSpace:"nowrap",overflow: "hidden", textOverflow: "ellipsis"}}>
                     {name}
                 </Typography>
 
@@ -36,7 +36,7 @@ export default function ProductCard({ image, name, resturant, cost, id }) {
                 </Typography>
             </CardContent>
             <CardActions style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p style={{ color: "#00B2A9", marginLeft: 7 }}>{cost}</p>
+                <p style={{ color: "#00B2A9", marginLeft: 7 }}>{cost}$</p>
 
                 <Button style={{ display: 'flex', justifyContent: 'flex-end' }} onClick={() => deleteProduct(id)}><MdDeleteForever style={{ color: "#EB5757", fontSize: 22 }}/></Button>
             </CardActions>
