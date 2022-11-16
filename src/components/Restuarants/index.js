@@ -3,18 +3,23 @@ import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
+import PageContainer from "../../shared/components/PageContainer";
 
-
-export default function Restuarants() {
+function Restuarants() {
 
     return (
         <Container>
             <Header />
             <Sidebar />
             <Footer />
-            <div>
-                Restuarants!_!_!
-                </div>
+            <PageContainer>
+
+                
+
+            </PageContainer>
         </Container>
     )
 };
+
+
+export default Restuarants;
