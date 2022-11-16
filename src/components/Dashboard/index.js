@@ -3,11 +3,11 @@ import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
-import { Actions, Caption, DashboardBody, DimmedEmptyText, FlexContainer, Orders, Risks, Salary } from "./Dashboard.styled";
+import PageContainer from "../../shared/components/PageContainer"
+import { Actions, Caption, DimmedEmptyText, FlexContainer, Orders, Risks, Salary } from "./Dashboard.styled";
 
 import Donut from "./Donut";
 import BarChart from "./BarChart";
-
 
 
 
@@ -21,7 +21,7 @@ export default function Dashboard() {
             <Sidebar />
             <Footer />
 
-            <DashboardBody>
+            <PageContainer>
 
                 <FlexContainer>
 
@@ -58,7 +58,7 @@ export default function Dashboard() {
                 </FlexContainer>
 
 
-            </DashboardBody>
+            </PageContainer>
 
         </Container>
     )
