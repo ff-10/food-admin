@@ -1,17 +1,17 @@
-import { Pagination } from "@mui/material";
+import { Pagination } from "./AppPagination.styled";
 import { Box } from "@mui/system";
 import { useEffect, useState } from "react";
 import PaginationApi from "../../../api/Pagination";
 
-const pageSize = 10;
+const cardsPerPage = 10;
 
 export default function ProductPagination({ setProducts }) {
-
+    
 
     const [pagination, setPagination] = useState({
         count: 0,
         from: 0,
-        to: pageSize
+        to: cardsPerPage
     });
 
     useEffect(() => {
@@ -24,22 +24,18 @@ export default function ProductPagination({ setProducts }) {
     }, [pagination.from, pagination.to]);
 
     const handlePageChange = (e, page) => {
-        const from = (page - 1) * pageSize;
-        const to = (page - 1) * pageSize + pageSize;
-
+        const from = (page - 1) * cardsPerPage;
+        const to = (page - 1) * cardsPerPage + cardsPerPage;
         setPagination({ ...pagination, from, to });
-    }
 
+    }
 
     return (
         <Box justifyContent={"center"} alignItems="center" display={"flex"} sx={{ marginTop: "80px" }}>
-
-            <Pagination count={Math.ceil(pagination.count / pageSize)} color="secondary" size="large"
+            <Pagination count={Math.ceil(pagination.count / cardsPerPage)} color="secondary" size="large"
                 onChange={handlePageChange}
             >
-
             </Pagination>
-
         </Box>
     )
 

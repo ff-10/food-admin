@@ -3,7 +3,7 @@ import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
-import { CardContainer, HeaderCaption, ProductsBody, ProductsHeader} from "./Products.styled";
+import { CardContainer, HeaderCaption, ProductsBody, ProductsHeader, PaginationContainer } from "./Products.styled";
 import { Select, MenuItem } from "@mui/material";
 
 import ProductCard from "./ProductCard";
@@ -68,9 +68,8 @@ export default function Products() {
                         <ProductCard key={`product-card-index-${product.id}`} image={product.image} name={product.product_name} resturant={product.restaurant_name} cost={product.product_price} id={product.id} />
                     ))}
                 </CardContainer>
-                        
-                <ProductPagination setProducts={(products) => setProducts(products)} />
 
+                <ProductPagination setProducts={(products) => setProducts(products)} />
             </ProductsBody>
         </Container>
     )
