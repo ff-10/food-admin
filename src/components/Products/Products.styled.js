@@ -50,3 +50,10 @@ export const CardContainer = styled(TableContainer)`
     flex-wrap: wrap;
 `;
 
+
+export const PaginationContainer = styled.div`
+    width: 300px;
+    background-color: #FFF;
+    padding: 10px;
+
+`
