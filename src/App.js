@@ -1,4 +1,4 @@
-import Category from "./components/Category";
+import Orders from "./components/Orders";
 import "./styles/App.css";
 
 
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <Category/>
+      <Orders/>
     </>
   );
 }
