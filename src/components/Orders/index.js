@@ -19,8 +19,10 @@ import { MdDeleteOutline } from "react-icons/md";
 import { CategoryHeader, HeaderCaption } from "./Orders.styled";
 import { BsPlusLg } from "react-icons/bs";
 
-import {IDCell} from "../Category/Category.styled"
+import { IDCell } from "../Category/Category.styled"
 import { Button } from "@mui/material";
+
+import offers from "../../mocks/offers/offers.json";
 
 const columns = [
     { id: 'id', label: 'ID', minWidth: 170 },
@@ -50,6 +52,11 @@ const columns = [
         label: 'Contact',
         minWidth: 170
     },
+    {
+        id: '',
+        label: '',
+        minWidth: 170
+    },
 ];
 
 
@@ -64,8 +71,10 @@ function createData(id, customerID, time, address, amount, paymentMethod, contac
 const rows = [
     //categories.map(category => ... onClick(id));
     //fetch from API
-    createData(
-        2,3,1),
+    offers.map(offer => {
+        console.log(offer);
+        createData(<IDCell>1</IDCell>, <IDCell>X</IDCell>);
+    })
 
 ];
 
