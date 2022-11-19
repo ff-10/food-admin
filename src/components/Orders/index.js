@@ -22,7 +22,7 @@ import { BsPlusLg } from "react-icons/bs";
 import { IDCell } from "../Category/Category.styled"
 import { Button } from "@mui/material";
 
-import offers from "../../mocks/offers/offers.json";
+import orders from "../../mocks/orders/order.json";
 
 const columns = [
     { id: 'id', label: 'ID', minWidth: 170 },
@@ -71,7 +71,7 @@ function createData(id, customerID, time, address, amount, paymentMethod, contac
 const rows = [
     //categories.map(category => ... onClick(id));
     //fetch from API
-    offers.map(offer => {
+    orders.map(offer => {
         console.log(offer);
         createData(<IDCell>1</IDCell>, <IDCell>X</IDCell>);
     })
@@ -107,7 +107,7 @@ export default function Orders() {
 
                 <CategoryHeader>
                     <HeaderCaption>
-                        Category
+                        Orders
                     </HeaderCaption>
                 </CategoryHeader>
 
