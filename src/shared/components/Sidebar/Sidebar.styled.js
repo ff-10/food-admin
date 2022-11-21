@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -17,7 +18,7 @@ export const Sidebar = styled.div`
 
 `;
 
-export const SidebarLink = styled.li`
+export const SidebarLink = styled(Link)`
     display: flex;
     align-items: center;
     padding: 10px;
@@ -26,6 +27,8 @@ export const SidebarLink = styled.li`
     border-radius: 4px;
     user-select: none;
     margin: 8px 0;
+    color: #FFF;
+    text-decoration: none;
 
     &:hover{
         background-color: rgba(255,255,255,.2);

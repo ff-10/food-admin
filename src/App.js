@@ -1,14 +1,9 @@
-import Orders from "./components/Orders";
+import Pages from "./pages";
 import "./styles/App.css";
 
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <Orders/>
-    </>
+    <Pages />
   );
 }
-
-export default App;

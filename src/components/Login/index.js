@@ -4,18 +4,23 @@ import LogoImg from "../../images/logos/logo.svg";
 import LoginCover from "../../images/loginCover.svg"
 import LangDropdown from "../DropdownLang"
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function Login() {
 
+    const navigate = useNavigate();
+
+
     useEffect(() => {
 
         const isLogged = localStorage.getItem('isLogged');
-        
-        if(isLogged === "true"){
-            //forward direct to Dashboard otherwise nothing.
+
+        if (isLogged === "true") {
+            // alert('already logged');
+            navigate('/dashboard');
         }
-        
 
     }, []);
 
@@ -49,7 +54,7 @@ export default function Login() {
             else {
                 alert('login successfully')
                 localStorage.setItem('isLogged', true)
-                // and navigate to dashboard
+                navigate('/dashboard')
             }
         }
 
