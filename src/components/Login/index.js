@@ -13,7 +13,7 @@ export default function Login() {
     const navigate = useNavigate();
     const isLogged = localStorage.getItem('isLogged');
 
-    useEffect(() => {
+    useEffect(() => { 
 
         if (isLogged === "true") {
             navigate('/dashboard');
