@@ -13,7 +13,7 @@ export default function Login() {
     const navigate = useNavigate();
     const isLogged = localStorage.getItem('isLogged');
 
-    useEffect(() => {
+    useEffect(() => { 
 
         if (isLogged === "true") {
             navigate('/dashboard');
@@ -61,25 +61,25 @@ export default function Login() {
         <>
             {
                 isLogged ? null :
-                <LoginBody>
-                    <Logo src={LogoImg} alt='Logo' />
-                    <FormBody>
-                        <Form onSubmit={formik.handleSubmit}>
-                            <Caption>Welcome Admin</Caption>
-                            <Input placeholder='Username' type="text" name="username" onChange={formik.handleChange} value={formik.values.username} style={{ marginBottom: 26 }} />
-                            <ErrorText>{formik.errors.username && formik.errors.username}</ErrorText>
-                            <Input placeholder='Password' type="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
-                            <ErrorText>{formik.errors.password && formik.errors.password}</ErrorText>
-                            <LoginButton type='submit' style={{ marginTop: 35 }} >Sign in</LoginButton>
-                        </Form>
+                    <LoginBody LoginBody >
+                        <Logo src={LogoImg} alt='Logo' />
+                        <FormBody>
+                            <Form onSubmit={formik.handleSubmit}>
+                                <Caption>Welcome Admin</Caption>
+                                <Input placeholder='Username' type="text" name="username" onChange={formik.handleChange} value={formik.values.username} style={{ marginBottom: 26 }} />
+                                <ErrorText>{formik.errors.username && formik.errors.username}</ErrorText>
+                                <Input placeholder='Password' type="password" name="password" onChange={formik.handleChange} value={formik.values.password} />
+                                <ErrorText>{formik.errors.password && formik.errors.password}</ErrorText>
+                                <LoginButton type='submit' style={{ marginTop: 35 }} >Sign in</LoginButton>
+                            </Form>
 
-                        <CoverImage>
-                            <LangDropdownBox><LangDropdown /></LangDropdownBox>
+                            <CoverImage>
+                                <LangDropdownBox><LangDropdown /></LangDropdownBox>
 
-                            <img src={LoginCover} width={"90%"} alt='Login Image' />
-                        </CoverImage>
-                    </FormBody>
-                </LoginBody>
+                                <img src={LoginCover} width={"90%"} alt='Login Image' />
+                            </CoverImage>
+                        </FormBody>
+                    </LoginBody >
             }
         </>
     )
