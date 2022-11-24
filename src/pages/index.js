@@ -12,8 +12,6 @@ const RestaurantsPage = lazy(() => import("./Restaurants"));
 
 export default function Pages() {
 
-
-
     return (
         <>
 
