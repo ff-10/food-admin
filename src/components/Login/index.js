@@ -60,7 +60,7 @@ export default function Login() {
     return (
         <>
             {
-                isLogged ? null : 
+                isLogged ? null :
                     <LoginBody LoginBody >
                         <Logo src={LogoImg} alt='Logo' />
                         <FormBody>
