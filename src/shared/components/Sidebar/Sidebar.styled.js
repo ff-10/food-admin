@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -18,7 +18,8 @@ export const Sidebar = styled.div`
 
 `;
 
-export const SidebarLink = styled(Link)`
+export const SidebarLink = styled(NavLink)`
+
     display: flex;
     align-items: center;
     padding: 10px;
@@ -34,14 +35,19 @@ export const SidebarLink = styled(Link)`
         background-color: rgba(255,255,255,.2);
     }
 
+
 `;
 
 export const SidebarIcon = styled.div`
-
     margin-right: 15px;
     margin-left: 5px;
     display: flex;
     align-items: center;
     font-size: 20px;
 
-`
+`;
+
+export const SidebarImg = styled.img`
+    margin-right: 15px;
+    margin-left: 5px;
+`;
