@@ -8,7 +8,8 @@ const DashboardPage = lazy(() => import("./Dashboard"));
 const LoginPage = lazy(() => import("./Login"));
 const ProductsPage = lazy(() => import("./Products"));
 const RestaurantsPage = lazy(() => import("./Restaurants"));
-
+const OrdersPage = lazy(() => import("./Orders"));
+const OffersPage = lazy(() => import("./Offers"));
 
 export default function Pages() {
 
@@ -22,6 +23,8 @@ export default function Pages() {
                 <Route path="/category" element={<Suspense fallback={<Loading />}> <CategoryPage /> </Suspense>} />
                 <Route path="/products" element={<Suspense fallback={<Loading />}> <ProductsPage /> </Suspense>} />
                 <Route path="/restaurants" element={<Suspense fallback={<Loading />}><RestaurantsPage /></Suspense>} />
+                <Route path="/orders" element={<Suspense fallback={<Loading />}><OrdersPage /></Suspense>} />
+                <Route path="/offers" element={<Suspense fallback={<Loading />}><OffersPage /></Suspense>} />
                 <Route path="*" element={<Page404 />} />
             </Routes>
         </>
