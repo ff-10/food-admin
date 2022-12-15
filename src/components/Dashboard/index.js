@@ -1,6 +1,8 @@
 import Header from "../../shared/components/Header";
 import Footer from "../../shared/components/Footer";
 import Sidebar from "../../shared/components/Sidebar";
+import AddProductForm from "../../shared/components/ProductForm";
+
 
 import Container from "../../shared/components/Container";
 import PageContainer from "../../shared/components/PageContainer"
@@ -17,6 +19,7 @@ export default function Dashboard() {
 
     return (
         <Container>
+            <AddProductForm/>
             <Header />
             <Sidebar />
             <Footer />
