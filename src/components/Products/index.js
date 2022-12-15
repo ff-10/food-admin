@@ -9,6 +9,7 @@ import { Select, MenuItem } from "@mui/material";
 import ProductCard from "./ProductCard";
 import ProductPagination from "./AppPagination";
 import { useState } from "react";
+import ProductForm from "./ProductForm";
 
 
 
@@ -71,6 +72,9 @@ export default function Products() {
 
                 <ProductPagination setProducts={(products) => setProducts(products)} />
             </ProductsBody>
+            
+            <ProductForm/>
+
         </Container>
     )
 };
