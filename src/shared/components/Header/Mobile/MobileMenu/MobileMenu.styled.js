@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-
+import { SidebarLink as SidebarLnk } from "../../../Sidebar/Sidebar.styled";
 
 export const MobileMenuBody = styled.div`
     width: 100%;
@@ -48,21 +47,11 @@ export const MobileSidebar = styled.div`
 `;
 
 
-export const SidebarLink = styled.li`
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    transition: all 500ms;
-    border-radius: 4px;
-    user-select: none;
-    margin: 8px 0;
-    color: #FFFFFF;
 
+export const SidebarLink = styled(SidebarLnk)`
     &:hover{
-        background-color: rgba(255,255,255,.2);
+        background: rgba(0,0,0,.1)
     }
-
 `;
 
 export const SidebarIcon = styled.div`

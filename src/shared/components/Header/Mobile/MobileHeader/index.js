@@ -6,16 +6,17 @@ import { BsPlusLg } from "react-icons/bs"
 import { MdSegment } from "react-icons/md"
 import useMobileMenuProvider from "../../../../../hooks/useMobileMenu";
 import MobileMenu from "../MobileMenu";
+import useProductFormProvider from "../../../../../hooks/useProductForm";
 
 export default function MobileHeader() {
 
     const { setOpen } = useMobileMenuProvider();
-
+    const productProvider = useProductFormProvider();
     return (
         <HeaderBody>
             <MobileMenu />
             <MenuArea>
-                <HamburgerMenu onClick={() => { setOpen(prev => !prev)}}>
+                <HamburgerMenu onClick={() => { setOpen(prev => !prev) }}>
                     <MdSegment />
                 </HamburgerMenu>
                 <Logo>
@@ -23,7 +24,7 @@ export default function MobileHeader() {
                 </Logo>
             </MenuArea>
             <ItemsArea>
-                <AddProductButton><BsPlusLg style={{ color: '#FFFFFF', marginRight: 3 }} /></AddProductButton>
+                <AddProductButton onClick={() => productProvider.setOpen(prev => !prev)} ><BsPlusLg style={{ color: '#FFFFFF', marginRight: 3 }} /></AddProductButton>
                 <AdminLogo>
                     <img src={adminImg} alt="Admin" style={{ marginRight: 14 }} />
                 </AdminLogo>
