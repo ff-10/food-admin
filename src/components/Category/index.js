@@ -4,6 +4,7 @@ import Sidebar from "../../shared/components/Sidebar";
 
 import Container from "../../shared/components/Container";
 import PageContainer from "../../shared/components/PageContainer";
+import AddProductForm from "../../shared/components/ProductForm";
 
 
 import Paper from '@mui/material/Paper';
@@ -81,6 +82,7 @@ export default function Category() {
     return (
 
         <Container>
+            <AddProductForm/>
             <Header />
             <Sidebar />
             <Footer />
