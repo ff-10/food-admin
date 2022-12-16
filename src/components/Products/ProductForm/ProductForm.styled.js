@@ -16,6 +16,15 @@ export const FormArea = styled.form`
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+
+    @media (max-width: 1200px) {
+        width: 90vw;
+    }
+
+    @media (max-width: 572px) {
+        width: 100vw;
+    }
 `;
 
 
@@ -26,6 +35,10 @@ export const Title = styled.p`
     margin-top: 28px;
     margin-left: 30px;
     margin-bottom: 33px;
+
+    @media (max-width: 5px){
+        
+    }
 `;
 
 export const ImageUploadArea = styled.div`
@@ -34,6 +47,9 @@ export const ImageUploadArea = styled.div`
     padding: 0 30px;
     position: relative;
     
+    @media (max-width: 960px) {
+        flex-direction: column;
+    }
 `;
 
 export const ProductFormArea = styled.div`
@@ -41,7 +57,11 @@ export const ProductFormArea = styled.div`
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 150px;
+    margin-bottom: 30px;
+
+    @media (max-width: 960px) {
+        flex-direction: column;
+    }
 `;
 
 export const Caption = styled.p`
@@ -49,6 +69,10 @@ export const Caption = styled.p`
     letter-spacing: 0.01em;
     color: #C7C7C7;
     font-weight: bold;
+
+    @media (max-width: 960px){
+        margin-bottom: 10px;
+    }
 `;
 
 export const ImageUpload = styled.div`
@@ -61,6 +85,10 @@ export const ImageUpload = styled.div`
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+
+    @media (max-width: 960px){  
+        width: 100%;
+    }
 `;
 
 export const ImageUploadText = styled.p`
@@ -83,6 +111,10 @@ export const AddProductForm = styled.form`
     width: 70%;
     padding: 20px 15px;
     width: 526px;
+
+    @media (max-width: 960px) {
+        width: 100%;
+    }
 `;
 
 export const Label = styled.label`
@@ -152,7 +184,11 @@ export const ButtonsContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 56px;
-    margin-top: 22px;
+    margin-top: 15px;
+
+    @media (max-width: 576px){
+        padding: 0 20px;
+    }
 `;
 
 export const CancelButton = styled(Button)`
@@ -183,7 +219,7 @@ export const CloseButton = styled.button`
     background: #C74FEB;
     border-radius: 14px;
     position: absolute;
-    left: 460px;
+    left: 410px;
     top: 31px;
     z-index: 9999999;
     color: #FFF;
@@ -199,6 +235,16 @@ export const CloseButton = styled.button`
         opacity: 0.8;
         transform: scale(0.98);
         background-color: #E30A17;
+    }
+
+    @media (max-width: 1700px){
+        left: 330px;
+    }
+    @media (max-width: 1500px){
+        left: 280px;
+    }
+    @media (max-width: 1200px){
+        left: 380px;
     }
 
 `;
