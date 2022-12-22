@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Button, Drawer } from "@mui/material";
+import { Box, Button, Drawer } from "@mui/material";
 
 
 export const FormBody = styled(Drawer)`
@@ -7,6 +7,11 @@ export const FormBody = styled(Drawer)`
     z-index: 999999;
     width: 100%;
     transition: all 500ms;
+`;
+
+export const ErrorBoxContainer = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 export const FormArea = styled.form`
@@ -105,7 +110,7 @@ export const UploadIcon = styled.div`
 `;
 
 
-export const AddProductForm = styled.form`
+export const AddProductForm = styled.div`
     background: #43445A;
     border-radius: 14px;
     width: 70%;
