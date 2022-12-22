@@ -1,5 +1,5 @@
-import { useRef,useState } from "react";
-import { Caption, CloseButton, FormArea, FormBody, SpaceDivider, ImageUpload, ImageUploadArea, ImageUploadText, ProductFormArea, Label, Input, Title, UploadIcon, AddProductForm, BigInput, Select, Divider, ButtonsContainer, CancelButton, CreateButton } from "./ProductForm.styled";
+import { useRef, useState } from "react";
+import { Caption, CloseButton, FormArea, FormBody, SpaceDivider, ImageUpload, ImageUploadArea, ImageUploadText, ProductFormArea, Label, Input, Title, UploadIcon, AddProductForm, BigInput, Select, Divider, ButtonsContainer, CancelButton, CreateButton, ErrorBoxContainer } from "./ProductForm.styled";
 
 import { IoClose } from "react-icons/io5";
 import { useFormik } from "formik";
@@ -8,12 +8,18 @@ import { MdCloudUpload } from "react-icons/md";
 
 import rests from "../../../mocks/restaurants/restaurnat.json";
 import useProductFormProvider from "../../../hooks/useProductForm";
+import { Alert } from "@mui/material";
 
 export default function ProductForm() {
 
-    const {open, setOpen} = useProductFormProvider();
+    const { open, setOpen } = useProductFormProvider();
     const [file, setFile] = useState(null);
     const inputRef = useRef(null);
+
+    const closeForm = () =>{
+        setOpen(prev => !prev);
+        formik.resetForm();
+    };
 
     const openFileExplorer = () => {
         inputRef.current.click();
@@ -33,37 +39,47 @@ export default function ProductForm() {
             name: "",
             description: "",
             price: "",
-            restaurants: ""
+            restaurant: ""
         },
-        validate: (vals) => {
+        validate: ({name, description, price, image, restaurant}) => {
             const errors = {};
 
-            if (!vals.image) {
-                errors.image = "*";//i18
+            if (!image) {
+                errors.image = "Image is required!";//i18
             }
 
-            if (!vals.name) {
-                errors.name = "*";//i18
+            if (!name) {
+                errors.name = "Name is required!";//i18
             }
 
-            if (!vals.description) {
-                errors.description = "*";//i18
+            if (!description) {
+                errors.description = "Description is required!";//i18
             }
 
-            if (!vals.price) {
-                errors.price = "*";//i18
+            if (!price) {
+                errors.price = "Price is required!";//i18
             }
 
-            if (!vals.restaurants) {
-                errors.restaurants = "*";//i18
+            if (!restaurant) {
+                errors.restaurant = "Resturant is required!";//i18
             }
 
             return errors;
         },
-        onSubmit: (vals) => {
-            //
-            alert('submit sucessful, values, open console for see values');
-            console.log(vals);
+        onSubmit: ({name, description, price, image, restaurant}, formikFunctions) => {
+
+            const product = {
+                name,
+                description,
+                price,
+                image,
+                restaurant
+            };
+
+
+            alert('submit sucessful, open console for see values');
+            console.log(product);
+            setTimeout(() => formikFunctions.resetForm(), 2000);
         }
     });
 
@@ -73,18 +89,21 @@ export default function ProductForm() {
             <FormBody
                 anchor="right"
                 open={open}
-                onClose={() => setOpen(prev => !prev)}
+                onClose={closeForm}
             >
 
                 <FormArea onSubmit={formik.handleSubmit}>
                     <Title>Add product</Title>
 
                     <ImageUploadArea>
-                        <Caption>Upload your product image *</Caption>
-                        <ImageUpload onClick={openFileExplorer}>
-                            <UploadIcon><MdCloudUpload /></UploadIcon>
-                            <ImageUploadText>upload</ImageUploadText>
-                        </ImageUpload>
+                        <Caption>Upload your product image</Caption>
+                        <ErrorBoxContainer>
+                            <ImageUpload onClick={openFileExplorer}>
+                                <UploadIcon><MdCloudUpload /></UploadIcon>
+                                <ImageUploadText>upload</ImageUploadText>
+                            </ImageUpload>
+                            {formik.errors.image ? <Alert severity="error">{formik.errors.image}</Alert> : null}
+                        </ErrorBoxContainer>
 
                         <input
                             ref={inputRef}
@@ -103,29 +122,30 @@ export default function ProductForm() {
 
                         <AddProductForm>
                             <Label htmlFor="name">Name</Label>
-                            <Input id="name" type="text" />
+                            <Input type="text" name="name"  id="name" value={formik.values.name || ""} onChange={formik.handleChange} placeholder={formik.errors.name ? 'REQUIRED!' : null} style={formik.errors.name ? {border: '1px solid red'} : null} />
                             <SpaceDivider />
                             <Label htmlFor="description">Description</Label>
-                            <BigInput id="description" />
+                            <BigInput name="description" id="description" type="textarea" value={formik.values.description || ""} onChange={formik.handleChange} placeholder={formik.errors.name ? 'REQUIRED!' : null} style={formik.errors.name ? {border: '1px solid red'} : null} />
                             <SpaceDivider />
                             <Label htmlFor="price">Price</Label>
-                            <Input id="price" type="number" />
+                            <Input name="price" id="price" value={formik.values.price || ""} onChange={formik.handleChange} placeholder={formik.errors.name ? 'REQUIRED!' : null} style={formik.errors.name ? {border: '1px solid red'} : null} />
                             <SpaceDivider />
-                            <Label >Restaurants</Label>
-                            <Select>
+                            <Label >Restaurant</Label>
+                            <Select name="restaurant" style={formik.errors.name ? {border: '1px solid red'} : null} onChange={formik.handleChange} value={formik.values.restaurant || ""} >
+                                <option value="" disabled>{formik.errors.restaurant ? formik.errors.restaurant : "Select a restaurant." }</option>
                                 {rests.map(res => <option key={`product-restaurant-id-${res.id}}`}>{res.restaurant_name}</option>)};
                             </Select>
                         </AddProductForm>
                     </ProductFormArea>
                     <Divider />
                     <ButtonsContainer>
-                        <CancelButton onClick={() => setOpen(prev => !prev)}>Cancel</CancelButton>
-                        <CreateButton>Create Product</CreateButton>
+                        <CancelButton onClick={closeForm}>Cancel</CancelButton>
+                        <CreateButton type="submit">Create Product</CreateButton>
                     </ButtonsContainer>
                 </FormArea>
             </FormBody>
             {
-                open ? <CloseButton onClick={() => setOpen(prev => !prev)}><IoClose style={{ fontSize: 25 }} /></CloseButton> : null
+                open ? <CloseButton onClick={closeForm}><IoClose style={{ fontSize: 25 }} /></CloseButton> : null
             }
         </>
     );
