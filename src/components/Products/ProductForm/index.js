@@ -15,7 +15,7 @@ export default function ProductForm() {
     const { open, setOpen } = useProductFormProvider();
     const [file, setFile] = useState(null);
     const inputRef = useRef(null);
-
+    
     const closeForm = () =>{
         setOpen(prev => !prev);
         formik.resetForm();

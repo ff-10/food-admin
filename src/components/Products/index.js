@@ -12,7 +12,6 @@ import { useState } from "react";
 import ProductForm from "./ProductForm";
 
 
-
 export default function Products() {
 
     //filter items function
